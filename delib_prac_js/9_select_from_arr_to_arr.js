@@ -258,6 +258,18 @@
 
 // #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
+// 9.A while
+// var arr_h = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var small_h = [];
+// var index = 0;
+// while (index < arr_h.length) {
+//   if (arr_h[index].price < 10) {
+//     small_h.push(arr_h[index]);
+//   };
+//   index++;
+// };
+// console.log(small_h);
+
 // 9. B each
 // var arr_h = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
 // var small_h = [];
@@ -278,6 +290,34 @@
 
 // # 10. Start with an array of numbers and create a new array with only the odd numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+// 10.A while 
+// var numbers = [2, 4, 5, 1, 8, 9, 7];
+// var odds = [];
+// var index = 0;
+// while (index < numbers.length) {
+//   if (numbers[index] % 2 === 0) {
+//     odds.push(numbers[index]);
+//   }
+//   index++;
+// };
+// console.log(odds);
+
+// 10.B each
+// var numbers = [2, 4, 5, 1, 8, 9, 7];
+// var odds = [];
+// numbers.forEach(function (number) {
+//   if (number % 2 === 1) {
+//     odds.push(number);
+//   }
+// });
+// console.log(odds);
+
+// 10.C select (filter javascript)
+// var numbers = [2, 4, 5, 1, 8, 9, 7];
+// var odds = numbers.filter(function (number) {
+//   return number % 2 === 1;
+// });
+// console.log(odds);
 
 
 // # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/7de16ed43ea506e98df3fa15074b84f8
