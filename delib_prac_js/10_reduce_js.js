@@ -81,6 +81,18 @@
 
 // #  4. Start with an array of numbers and compute the the minumum number.
 // #     For example, [5, 10, 8, 3, 9] becomes 3.
+// 4.A while
+// var numbers = [5, 10, 8, 3, 9];
+// var min_num = numbers[0];
+// var index = 0;
+// while (index < numbers.length) {
+//   if (numbers[index] < min_num) {
+//     min_num = numbers[index];
+//   }
+//   index++;
+// };
+// console.log(min_num);
+
 // 4.B. each 
 // var numbers = [5, 10, 8, 3, 9];
 // min_num = numbers[0];
@@ -104,15 +116,86 @@
 
 // #  5. Start with an array of strings and compute the total length of all the strings.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+// 5.A while 
+// var sports = ["volleyball", "basketball", "badminton"];
+// var sum = 0;
+// index = 0;
+// while (index < sports.length) {
+//   sum = sum + sports[index].length;
+//   index++;
+// };
+// console.log(sum);
+
+// 5.B. 
+// var sports = ["volleyball", "basketball", "badminton"];
+// sum = 0;
+// sports.forEach(function (sport) {
+//   sum = sum + sport.length;
+// });
+// console.log(sum);
+
+// 5.C reduce
+// var sports = ["volleyball", "basketball", "badminton"];
+// var totalLength = sports.reduce(function (sum, sport) {
+//   return sum + sport.length;
+// }, 0);
+// console.log(totalLength);
+
 
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
+// 6.A. while
+
+// 6.B each
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var lowestPrice = items[0];
+// items.forEach(function (item) {
+//   if (item.price < lowestPrice.price) {
+//     lowestPrice = item;
+//   }
+// });
+// console.log(lowestPrice);
+
+// 6.C reduce
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var cheapestItem = items.reduce(function (cheapestItem, item) {
+//   if (item.price < cheapestItem.price) {
+//     return item;
+//   } else {
+//     return cheapestItem;
+//   }
+// }, items[0]);
+// console.log(cheapestItem);
+
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
+// 7.A.
+// 7.B each
+// var nums = [5, 10, 8, 3];
+// var product = 1;
+// nums.forEach(function (num) {
+//   product = product * num;
+// });
+// console.log(product);
+
+// 7.C reduce
+// var nums = [5, 10, 8, 3];
+// var product = nums.reduce(function (product, num) {
+//   return product * num;
+// }, 1);
+// console.log(product);
 
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+// 8.B each 
+// var strings = ["volleyball", "basketball", "badminton"];
+// var combo = "-";
+// strings.forEach(function (string) {
+//   combo += string + "-";
+// });
+// console.log(combo);
 
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
