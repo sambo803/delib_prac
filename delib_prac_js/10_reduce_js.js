@@ -146,6 +146,16 @@
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
 // 6.A. while
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var lowestPrice = items[0];
+// var index = 0;
+// while (index < items.length) {
+//   if (items[index].price < lowestPrice.price) {
+//     lowestPrice = items[index];
+//   };
+//   index++;
+// };
+// console.log(lowestPrice);
 
 // 6.B each
 // var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
@@ -171,6 +181,15 @@
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
 // 7.A.
+// var nums = [5, 10, 8, 3];
+// var product = 1;
+// var index = 0;
+// while (index < nums.length) {
+//   product = product * nums[index];
+//   index++;
+// };
+// console.log(product);
+
 // 7.B each
 // var nums = [5, 10, 8, 3];
 // var product = 1;
@@ -189,6 +208,16 @@
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
+// 8.A while
+// var strings = ["volleyball", "basketball", "badminton"];
+// var combo = "-";
+// var index = 0;
+// while (index < strings.length) {
+//   combo = combo + strings[index] + "-";
+//   index++;
+// };
+// console.log(combo);
+
 // 8.B each 
 // var strings = ["volleyball", "basketball", "badminton"];
 // var combo = "-";
@@ -197,12 +226,83 @@
 // });
 // console.log(combo);
 
+// 8.C reduce
+// var strings = ["volleyball", "basketball", "badminton"];
+// var bigWord = strings.reduce(function (total, string) {
+//   return total + string + "-";
+// }, "-");
+// console.log(bigWord);
+
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+// 9.A 
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var shortestName = items[0];
+// var index = 0;
+// while (index < items.length) {
+//   if (items[index].name.length < shortestName.name.length) {
+//     shortestName = items[index];
+//   };
+//   index++;
+// };
+// console.log(shortestName);
+
+// 9.B each
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var shortestName = items[0];
+// items.forEach(function (item) {
+//   if (item.name.length < shortestName.name.length) {
+//     shortestName = item;
+//   }
+// });
+// console.log(shortestName);
+
+// 9. C. reduce
+// var items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }];
+// var shortestName = items.reduce(function (shortest, item) {
+//   if (item.name.length < shortest.name.length) {
+//     return item;
+//   } else {
+//     return shortest;
+//   }
+// }, items[0]);
+// console.log(shortestName);
 
 // # 10. Start with an array of numbers and compute the maximum number.
 // #     For example, [5, 10, 8, 3] becomes 10.
 
+// 10.A while
+// var nums = [5, 10, 8, 3];
+// var max_num = nums[0];
+// var index = 0;
+// while (index < nums.length) {
+//   if (nums[index] > max_num) {
+//     max_num = nums[index];
+//   }
+//   index++;
+// };
+// console.log(max_num);
+
+// 10.B each
+// var nums = [5, 10, 8, 3];
+// var max_num = nums[0];
+// nums.forEach(function (num) {
+//   if (num > max_num) {
+//     max_num = num;
+//   }
+// });
+// console.log(max_num);
+
+// 10.C reduce
+// var nums = [5, 10, 8, 3];
+// var max_num = nums.reduce(function (max, num) {
+//   if (max < num) {
+//     return num;
+//   } else {
+//     return max;
+//   } (nums[0], num)
+// });
+// console.log(max_num);
 
 // # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/376c8931a48549889eb3c9bc091e9f43
 // JavaScript solutions: https://gist.github.com/peterxjang/130e1daf6d23f17a1426c8be6012ef21
