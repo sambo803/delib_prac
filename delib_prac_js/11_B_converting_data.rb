@@ -1,5 +1,5 @@
 #  1. Convert an array of arrays into a hash.
-#     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
+#     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => # # 3, 8 => 9, 2 => 16}.
 # 1.
 # arrays = [[1, 3], [8, 9], [2, 16]]
 # num_pairs = {}
@@ -28,6 +28,18 @@
 
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
+# word = "bookkeeper"
+# letter_instances = {}
+# index = 0
+# while index < word.length
+#   letter = word[index] 
+#   if letter_instances[letter] == nil
+#     letter_instances[letter] = 0
+#   end
+#   index += 1
+#   letter_instances[letter] += 1
+# end
+# p letter_instances
 
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
@@ -63,5 +75,12 @@
 
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+letters_hash = {"a" => 1, "b" => 2, "c" => 3}
+nums_hash = {}
+letters_hash.each  do |key, value|
+  nums_hash[value] = key 
+end
+p nums_hash
+
 
 # SOLUTIONS: https://gist.github.com/peterxjang/216a7a6e8411ee5c05118e78022f2bc7
