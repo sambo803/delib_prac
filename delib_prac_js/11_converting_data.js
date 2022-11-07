@@ -59,16 +59,18 @@
 // #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 // #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 // 6. 
-var arrStr = ["do", "or", "do", "not"];
-var hashFreqs = {};
-var index = 0;
-while (index < arrStr.length) {
-  if (arrStr[index] === arrStr[index + 1]) {
-
-  }
-}
-
-
+// var arrStr = ["do", "or", "do", "not"];
+// var hashFreqs = {};
+// var index = 0;
+// while (index < arrStr.length) {
+//   var word = arrStr[index]
+//   if (hashFreqs[word] === undefined) {
+//     hashFreqs[word] = 0;
+//   }
+//   hashFreqs[word]++;
+//   index++;
+// }
+// console.log(hashFreqs);
 
 // #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 // #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
